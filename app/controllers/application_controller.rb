@@ -45,7 +45,7 @@ class ApplicationController < Sinatra::Base
 
   delete '/show' do
     @recipe = Recipe.find_by_id(params[:id])
-    @recipe.delete
+    @recipe.destroy
     redirect :index
   end
 
