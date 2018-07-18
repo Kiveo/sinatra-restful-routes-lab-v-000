@@ -21,4 +21,10 @@ class ApplicationController < Sinatra::Base
     erb :show
   end
 
+  get '/recipes' do
+    @recipes = Recipe.all
+    erb :recipes
+  end
+
+
 end
