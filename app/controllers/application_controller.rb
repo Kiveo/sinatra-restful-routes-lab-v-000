@@ -17,12 +17,13 @@ class ApplicationController < Sinatra::Base
     @recipe.save
     redirect "recipes/#{@recipe.id}"
   end
-
+  #SHOW ACTION
   get '/recipes/:id' do
     @recipe = Recipe.find(params[:id])
     erb :show
   end
-
+  
+  #INDEX ACTION 
   get '/recipes' do
     @recipes = Recipe.all
     erb :index
