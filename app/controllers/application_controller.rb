@@ -13,7 +13,6 @@ class ApplicationController < Sinatra::Base
 
   post 'recipes' do
     @recipe = Recipe.create(params)
-    @recipe.id = params[:id]
     erb :recipes
   end
 
