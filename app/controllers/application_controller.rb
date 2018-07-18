@@ -22,7 +22,9 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/recipes/' do
-    "Hello World"
+    "Hello World!"
+    # @recipes = Recipe.all
+    # erb :index
   end
 
 end
